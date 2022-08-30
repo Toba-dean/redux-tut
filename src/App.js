@@ -1,13 +1,16 @@
 import './App.css';
-import { PostForm } from './features/Post/PostForm';
-import { PostList } from './features/Post/PostList';
+import { PostAsyncList } from './features/PostAsync/PostAsyncList';
+// import { PostForm } from './features/Post/PostForm';
+import { PostFormAsync } from './features/PostAsync/PostFormAsync';
 
 function App() {
   return (
     <main className="App">
       {/* <Counter /> */}
-      <PostForm />
-      <PostList />
+      {/* <PostForm /> */}
+      {/* <PostList /> */}
+      <PostFormAsync />
+      <PostAsyncList />
     </main>
   );
 }

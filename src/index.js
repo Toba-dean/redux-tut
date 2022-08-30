@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import { fetchUsers } from './features/users/userAsyncSlice';
 
+// fetch users as soon as the app loads
+store.dispatch(fetchUsers());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
