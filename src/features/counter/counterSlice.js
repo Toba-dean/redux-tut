@@ -8,6 +8,8 @@ const InitialState = {
 const counterSlice = createSlice({
   name: 'counter',
   initialState: InitialState,
+
+  // this takes the action.type and the function to execute.
   reducers: {
     increment: state => { state.count += 1 },
     decrement: state => { state.count -= 1 },

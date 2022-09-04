@@ -38,6 +38,7 @@ const postSlice = createSlice({
       reducer: (state, action) => {
         state.push(action.payload)
       },
+      // this is the payload to send when a new post is added.
       prepare: (title, content, userId) => {
         return {
           payload: {
