@@ -82,7 +82,7 @@ const postSliceAsync = createSlice({
         });
 
         // Add any fetched posts to the array
-        state.posts = [...loadedPosts]
+        state.posts = [state.posts, ...loadedPosts]
       })
       .addCase(fetchPosts.rejected, (state, action) => {
         state.status = 'failed'
@@ -91,7 +91,7 @@ const postSliceAsync = createSlice({
       .addCase(addNewPost.fulfilled, (state, action) => {
         // Fix for API post IDs:
         // Creating sortedPosts & assigning the id 
-        // would be not be needed if the fake API 
+        // would not be needed if the fake API 
         // returned accurate new post IDs
         const sortedPosts = state.posts.sort((a, b) => {
           if (a.id > b.id) return 1

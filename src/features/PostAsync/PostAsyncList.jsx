@@ -17,7 +17,7 @@ export const PostAsyncList = () => {
       dispatch(fetchPosts())
     }
   }, [postStatus, dispatch])
-  
+
   let content;
   if (postStatus === 'loading') {
     content = <p>"Loading..."</p>;

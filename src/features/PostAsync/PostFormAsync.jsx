@@ -24,8 +24,10 @@ export const PostFormAsync = () => {
   const onSavePostClicked = () => {
     if (canSave) {
       try {
-        setAddRequestStatus('pending')
-        dispatch(addNewPost({ title, body: content, userId })).unwrap()
+        setAddRequestStatus('pending');
+        
+        // redux gives the unwrap() which either has the action payload or throws an error.
+        dispatch(addNewPost({ title, body: content, userId })).unwrap();
 
         setTitle('')
         setContent('')
