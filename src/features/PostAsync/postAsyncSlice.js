@@ -123,4 +123,7 @@ export const selectAllPosts = ({ postAsync }) => postAsync.posts
 export const selectStatus = ({ postAsync }) => postAsync.status
 export const selectError = ({ postAsync }) => postAsync.error
 
+export const selectPostById = (state, postId) => 
+  state.postAsync.posts.find(post => post.id === postId);
+
 export default postSliceAsync.reducer;

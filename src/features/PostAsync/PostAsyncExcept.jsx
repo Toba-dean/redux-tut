@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import PostAsyncAuthor from "./PostAsyncAuthor";
 import Reaction from "../Post/Reaction";
 import TimeAgo from "../Post/TimeAgo";
@@ -5,8 +7,11 @@ import TimeAgo from "../Post/TimeAgo";
 const PostsExcerpt = ({ post }) => {
   return (
     <article>
-      <h3>{post.title}</h3>
-      <p>{post.body.substring(0, 100)}</p>
+      <h2>{post.title}</h2>
+      <p className="excerpt">{post.body.substring(0, 100)}</p>
+      <Link to={`post/${post.id}`}>
+        View Post
+      </Link>
 
       <p className="postCredit">
         <PostAsyncAuthor userId={post.userId} />

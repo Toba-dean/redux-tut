@@ -30,7 +30,7 @@ export const PostAsyncList = () => {
 
   return (
     <section>
-      <h2>Post</h2>
+      {/* <h2>Post</h2> */}
       {content}
     </section>
   )
