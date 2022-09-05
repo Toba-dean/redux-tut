@@ -23,6 +23,9 @@ export const SinglePost = () => {
     <article>
       <h2>{post.title}</h2>
       <p>{post.body}</p>
+      <Link to={`post/edit/${post.id}`}>
+        Edit Post
+      </Link>
 
       <p className="postCredit">
         <PostAsyncAuthor userId={post.userId} />

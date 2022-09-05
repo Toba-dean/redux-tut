@@ -23,4 +23,7 @@ const usersSliceAsync = createSlice({
 
 export const selectAllUsersAsync = ({ userAsync }) => userAsync;
 
+export const selectAsyncUserById = (state, userId) =>
+    state.userAsync.find(user => user.id === userId)
+
 export default usersSliceAsync.reducer

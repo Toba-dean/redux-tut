@@ -9,9 +9,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { store } from './app/store';
 import { fetchUsers } from './features/users/userAsyncSlice';
+import { fetchPosts } from './features/PostAsync/postAsyncSlice';
 
 // fetch users as soon as the app loads
 store.dispatch(fetchUsers());
+store.dispatch(fetchPosts());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

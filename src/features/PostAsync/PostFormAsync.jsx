@@ -26,7 +26,7 @@ export const PostFormAsync = () => {
       try {
         setAddRequestStatus('pending');
         
-        // redux gives the unwrap() which either has the action payload or throws an error.
+        // redux gives the unwrap() which either has the action payload or throws an error. so you can use try and catch.
         dispatch(addNewPost({ title, body: content, userId })).unwrap();
 
         setTitle('')
